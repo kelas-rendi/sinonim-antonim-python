@@ -1,18 +1,19 @@
-kata = "gua suka gkgkgkgk lu"
+kata = "gua suka lu"
 
 f = open("data.txt", "r")
+sinonim = []
+list_kata = kata.split()
 for x in f:
     word = x.rstrip('\n')
-    onim = word.split(':')
-    print(onim)
-    kata2 = kata.split()
-    new_kata = []
-    for k in kata2:
-        print(k)
-        if onim[0] == k:
-            k = (onim[1])
-        new_kata.append(k)
+    sx = word.split(':')
+    sinonim.append(sx)
 
-    new_kata = ' '.join(str(e) for e in new_kata)
+print(sinonim)
+new_kata = []
+for k in list_kata:
+    for s in sinonim:
+        if s[0] == k:
+            k = s[1]
+    new_kata.append(k)
 
 print(new_kata)
