@@ -1,4 +1,4 @@
-kata = "gua suka lu"
+kata = "aa suka bb"
 
 f = open("data.txt", "r")
 sinonim = []
